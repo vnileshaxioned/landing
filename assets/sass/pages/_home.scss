@@ -1,0 +1,99 @@
+// banner section started here
+.banner { background-color: $primary-color; }
+
+.banner-wrapper {
+  padding: 310px 0 312px 5%;
+  position: relative;
+
+  .attachment {
+    position: absolute;
+    bottom: -42px;
+    left: 51.3%;
+    box-shadow: $shadow;
+
+    &-front {
+      bottom: -125px;
+      left: 65.5%;
+    }
+  }
+
+  .left-content { width: 46%; }
+
+  .tag-line {
+    margin: 18px 0;
+    color: $white;
+    @include fontProperty(null, 25px, null, null, 1.5);
+  }
+
+  .tag-link {
+    color: $white;
+    text-decoration: underline;
+    text-decoration-color: $underline-color;
+  }
+}
+
+.main-logo {
+  color: $white;
+  @include fontProperty(null, 38px);
+  text-transform: uppercase;
+}
+
+.banner-cta { margin-top: 30px; }
+
+.download-cta {
+  width: 33.8%;
+  padding: 15px 4%;
+  border-radius: 25px;
+  background-color: $tertiary-color;
+  color: $white;
+  @include fontProperty(null, 17px);
+
+  &::before {
+    content: '\f179';
+    margin-right: 2%;
+    @include fontProperty('FontAwesome');
+    float: left;
+  }
+}
+// banner section ends here
+// service section ends here
+.service-container {
+  padding-top: 117px;
+  @include flexBox(flex, null, null, column);
+}
+
+.service-list {
+  padding: 184px 1% 0;
+  border-bottom: 2px solid $secondary-color;
+  @include flexBox(flex, null, center, null, null, space-between);
+}
+
+.service-content {
+  margin-top: 38px;
+  @include flexBasis(48.8%);
+
+  .main-heading { text-align: left; }
+
+  .main-heading::after {
+    content: '';
+    width: 5%;
+    padding: 1px;
+    margin: 17px 0 22px;
+    background-color: $tertiary-color;
+  }
+}
+
+.service-list-right { @include flexBox(flex, null, center, row-reverse); }
+
+.main-heading {
+  @include flexBox(flex, null, null, column);
+  @include fontProperty(null, 31px);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.paragraph {
+  color: $text-color;
+  @include fontProperty(null, 17px, null, null, 1.7);
+}
+// service section ends here
