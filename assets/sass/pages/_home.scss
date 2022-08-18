@@ -175,7 +175,7 @@
 }
 // review section ends here
 // feature section start here
-.feature-wrapper { padding-bottom: 118px; }
+.feature-wrapper { padding-bottom: 121px; }
 
 .feature .paragraph {
   width: 63.4%;
@@ -235,3 +235,49 @@
   }
 }
 // feature section ends here
+// subscribe section start here
+.subscribe-wrapper { padding: 118px 0 128px; }
+
+.subscribe {
+  background-color: $primary-color;
+
+  & .paragraph {
+    width: 66%;
+    margin: 18px auto 0;
+    color: $primary-dark;
+    @include fontProperty(null, 20px);
+    text-align: center;
+  }
+
+  &-form {
+    padding: 0 2.7%;
+    margin-top: 82px;
+    @include flexBox(flex, null, null, null, null, space-between);
+  }
+}
+
+.form-group { @include flexBasis(31.4%); }
+
+.form-content {
+  width: 90%;
+  padding: 18px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background-color: $primary-light;
+  @include fontProperty(null, 18px);
+
+  &::placeholder { color: $black; }
+}
+
+.submit-cta {
+  @extend .download-cta;
+  width: 100%;
+  padding: 19px 4%;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  @include fontProperty(null, 17px);
+  text-transform: uppercase;
+}
+// subscribe section ends here
