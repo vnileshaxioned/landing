@@ -479,4 +479,73 @@ li {
   text-transform: uppercase;
 }
 
+.footer-wrapper {
+  padding-bottom: 124px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer-paragraph {
+  padding: 8px 0 6px;
+  color: #949595;
+  font-size: 14px;
+}
+
+.footer-link {
+  color: #3887ED;
+}
+
+.social-media {
+  width: 40%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  justify-content: center;
+}
+
+.social-list {
+  margin: 0 4.7%;
+}
+
+.social-icon {
+  color: #3887ED;
+  font-size: 30px;
+  text-indent: -9999px;
+}
+.social-icon::before {
+  font-family: "Font Awesome 5 Brands";
+  float: left;
+  text-indent: 0;
+}
+
+.facebook::before {
+  content: "\f39e";
+}
+
+.twitter::before {
+  content: "\f099";
+}
+
+.linkedin::before {
+  content: "\f0e1";
+}
+
+.mac::before {
+  content: "\f179";
+}
+
 /*# sourceMappingURL=style.css.map */

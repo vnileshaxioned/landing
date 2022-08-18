@@ -1,0 +1,37 @@
+.footer-wrapper {
+  padding-bottom: 124px;
+  @include flexBox(flex, null, center, column);
+}
+
+.footer-paragraph {
+  padding: 8px 0 6px;
+  color: $text-color;
+  @include fontProperty(null, 14px);
+}
+
+.footer-link { color: $tertiary-color; }
+
+.social-media {
+  width: 40%;
+  margin-top: 30px;
+  @include flexBox(flex, null, center, null, null, center);
+}
+
+.social-list { margin: 0 4.7%; }
+
+.social-icon {
+  color: $tertiary-color;
+  @include fontProperty(null, 30px);
+  text-indent: -9999px;
+
+  &::before {
+    @include fontProperty('Font Awesome 5 Brands');
+    float: left;
+    text-indent: 0;
+  }
+}
+
+.facebook::before { content: '\f39e'; }
+.twitter::before { content: '\f099'; }
+.linkedin::before { content: '\f0e1'; }
+.mac::before { content: '\f179'; }
