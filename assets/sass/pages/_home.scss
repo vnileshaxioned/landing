@@ -97,3 +97,80 @@
   @include fontProperty(null, 17px, null, null, 1.7);
 }
 // service section ends here
+// review section start here
+.review { background-color: $secondary-color; }
+.inner-wrapper { padding: 116px 0 132px; }
+
+.slider {
+  width: 66.5%;
+  margin: 79px auto 0;
+  @include flexBox(flex, null, center, column, null, center);
+
+  &-list {
+    display: none;
+    text-align: center;
+
+    &-active { display: block; }
+  }
+
+  &-attachment {
+    width: 11.7%;
+    margin: 0 auto;
+  }
+
+  &-image { border-radius: 50%; }
+}
+
+.review-content {
+  margin-top: 22px;
+
+  & .paragraph { @include fontProperty(null, 18px, null, null, 1.8); }
+}
+
+.review-heading {
+  margin-bottom: 5px;
+  color: $text-color;
+  @include fontProperty(null, 13px, null, 600);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.review-rating { margin-bottom: 34px; }
+
+.rating-star {
+  color: $gray-light;
+  margin: 0 0.2%;
+  display: inline-block;
+  @include fontProperty(null, 12px);
+  text-indent: -9999px;
+
+  &-active { color: $yellow; }
+
+  &::before {
+    content: '\f005';
+    @include fontProperty('FontAwesome');
+    float: left;
+    text-indent: 0;
+  }
+}
+
+.slider-predict {
+  width: 18%;
+  margin-top: 46px;
+  @include flexBox(flex, null, center, null, null, center);
+}
+
+.slider-dot {
+  margin: 0 5%;
+  color: $gray-light;
+  @include fontProperty(null, 12px);
+  text-indent: -9999px;
+
+  &::before {
+    content: '\f111';
+    @include fontProperty('FontAwesome');
+    float: left;
+    text-indent: 0;
+  }
+}
+// review section ends here
