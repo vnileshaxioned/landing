@@ -174,3 +174,64 @@
   }
 }
 // review section ends here
+// feature section start here
+.feature-wrapper { padding-bottom: 118px; }
+
+.feature .paragraph {
+  width: 63.4%;
+  margin: 32px auto;
+  @include fontProperty(null, 17px);
+  text-align: center;
+}
+
+.feature-container {
+  margin-top: 72px;
+  @include flexBox(flex, null, null, null, null, center);
+}
+
+.feature-list {
+  padding: 10px;
+  margin-right: 1.3%;
+  @include flexBasis(22%);
+  text-align: center;
+
+
+  & .paragraph {
+    width: 100%;
+    margin: 0;
+  }
+
+  &:nth-child(1) .feature-heading::before {
+    content: '\f10a';
+    padding: 26px 12.4%;
+  }
+
+  &:nth-child(2) .feature-heading::before { content: '\f004'; }
+
+  &:nth-child(3) .feature-heading::before {
+    content: '\f005';
+    padding: 26px 10.2%;
+  }
+  &:nth-child(4) .feature-heading::before {
+    content: '\f013';
+    padding: 26px 10.7%;
+  }
+}
+
+.feature-heading {
+  margin-bottom: 8px;
+  @include flexBox(flex, null, center, column);
+  @include fontProperty(null, 18px);
+  text-transform: uppercase;
+
+  &::before {
+    padding: 26px;
+    border-radius: 10px;
+    margin-bottom: 42px;
+    background-color: $icon-bg-color;
+    color: $tertiary-color;
+    @include fontProperty('FontAwesome', 42px);
+    float: left;
+  }
+}
+// feature section ends here
