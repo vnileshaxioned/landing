@@ -1,33 +1,68 @@
 .footer-wrapper {
   padding-bottom: 124px;
   @include flexBox(flex, null, center, column);
+  text-align: center;
+
+  @include responsive($mobile) {
+    padding: 70px 0;
+  }
 }
 
 .footer-paragraph {
   padding: 8px 0 6px;
   color: $text-color;
   @include fontProperty(null, 14px);
+
+  @include responsive($mobile) {
+    padding-top: 4px;
+  }
 }
 
-.footer-link { color: $tertiary-color; }
+.footer-link {
+  color: $tertiary-color;
+  @include transition(all .3s ease);
+
+  @include reverseResponsive($tablet) {
+    &:hover { color: $tertiary-dark; }
+  }
+}
 
 .social-media {
   width: 40%;
   margin-top: 30px;
   @include flexBox(flex, null, center, null, null, center);
+
+  @include responsive($mobile) {
+    margin-top: 20px;
+  }
 }
 
-.social-list { margin: 0 4.7%; }
+.social-list {
+  margin: 0 4.7%;
+
+  @include responsive($mobile) {
+    margin: 0 7%;
+  }
+}
 
 .social-icon {
   color: $tertiary-color;
   @include fontProperty(null, 30px);
   text-indent: -9999px;
+  @include transition(all .3s ease);
 
   &::before {
-    @include fontProperty('Font Awesome 5 Brands');
+    @include fontProperty('FontAwesome');
     float: left;
     text-indent: 0;
+  }
+
+  @include reverseResponsive($tablet) {
+    &:hover { color: $tertiary-dark; }
+  }
+
+  @include responsive($mobile) {
+    @include fontProperty(null, 22px);
   }
 }
 
